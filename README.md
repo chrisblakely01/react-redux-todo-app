@@ -8,7 +8,8 @@ Source code for React redux todo app YouTube tutorial. Includes
 
 ## Running the finished code
 
-- Clone the repo and run the following:
+Clone the repo and run the following:
+
 - cd app
 - npm install
 - npm start
@@ -17,7 +18,10 @@ Source code for React redux todo app YouTube tutorial. Includes
 
 The starter code is on a seperate branch in the repo. To get it:
 
-- TODO
+- cd app
+- npm install
+- git checkout starter
+- npm start
 
 ## Running the API
 
