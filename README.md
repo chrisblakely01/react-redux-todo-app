@@ -3,14 +3,14 @@
 Source code for React redux todo app YouTube tutorial. Includes
 
 - Finished source code
-- A branch with started code
+- Starter code
 - An API
 
 ## Running the finished code
 
 Clone the repo and run the following:
 
-- cd app
+- cd final
 - npm install
 - npm start
 
@@ -18,9 +18,8 @@ Clone the repo and run the following:
 
 The starter code is on a seperate branch in the repo. To get it:
 
-- cd app
+- cd starter
 - npm install
-- git checkout starter
 - npm start
 
 ## Running the API
@@ -31,3 +30,9 @@ The API is a dead basic node.js/express server
 - cd api
 - npm install
 - npm run server
+- check its running by going to browser/postman
+
+```
+localhost:7000/todos
+
+```
