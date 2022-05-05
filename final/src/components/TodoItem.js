@@ -20,7 +20,7 @@ const TodoItem = ({ id, title, completed }) => {
 					<input
 						type='checkbox'
 						className='mr-3'
-						checked={completed}
+						defaultChecked={completed}
 						onClick={handleCheckboxClick}
 					></input>
 					{title}
