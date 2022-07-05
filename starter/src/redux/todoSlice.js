@@ -8,6 +8,8 @@ const todoSlice = createSlice({
     { id: 3, title: 'todo3', completed: false },
     { id: 4, title: 'todo4', completed: true },
   ],
+
+  // for each reducer, there is an action to export.
   reducers: {
     addTodo: (state, action) => {
       const newManuhiri = {
@@ -17,8 +19,17 @@ const todoSlice = createSlice({
       }
       state.push(newManuhiri)
     },
+    toggleComplete: (state, action) => {
+      const index = state.findIndex((todo) => todo.id === action.payload.id)
+      state[index].completed = action.payload.completed
+    },
+    deleteTodo: (state, action) => {
+      return state.filter((todo) => todo.id !== action.payload.id)
+    },
+    
   },
 })
 
-export const { addTodo } = todoSlice.actions
+// export the actions
+export const { addTodo, toggleComplete, deleteTodo } = todoSlice.actions
 export default todoSlice.reducer
