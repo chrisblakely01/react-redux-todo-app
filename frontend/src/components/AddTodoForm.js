@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addTodo, addTodoAsync } from '../redux/todoSlice';
+import { addTodoAsync } from '../redux/todoSlice';
 import { useDispatch } from 'react-redux';
 
 
