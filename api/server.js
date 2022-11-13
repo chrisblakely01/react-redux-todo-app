@@ -4,7 +4,6 @@ const colors = require('colors');
 const cors = require('cors');
 const { json } = require('body-parser');
 const { nanoid } = require('nanoid');
-
 dotenv.config({ path: './config.env' });
 
 const app = express();
@@ -40,7 +39,9 @@ let todos = [
 	},
 ];
 
+
 app.get('/todos', (req, res) => res.send(todos));
+
 
 app.post('/todos', (req, res) => {
 	const todo = { title: req.body.title, id: nanoid(), completed: false };
