@@ -4,6 +4,8 @@ import TodoItem from './TodoItem';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTodosAsync } from '../redux/todoSlice';
 
+import s from "./TodoList.module.scss"
+
 const TodoList = () => {
 
 	const dispatch = useDispatch();
@@ -19,7 +21,7 @@ const TodoList = () => {
 
 
 	return (
-		<ul className='list-group'>
+		<ul className={s.list__group}>
 			{todos.map((todo) => (
 				<TodoItem id={todo.id} title={todo.title} completed={todo.completed} />
 			))}

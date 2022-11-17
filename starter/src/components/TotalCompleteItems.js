@@ -7,7 +7,7 @@ const TotalCompleteItems = () => {
 			(todo) => todo.completed === true
 			)
 	);
-	return <h4 className='mt-3'>Total Complete Items: {completedTodos.length}</h4>;
+	return <h4 >Выполненные пункты: {completedTodos.length}</h4>;
 };
 
 export default TotalCompleteItems;

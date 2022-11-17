@@ -1,0 +1,38 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.item__content {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    
+}
+
+.title {
+    margin-left: 15px;
+}
+
+.btn {
+    padding: 15px;
+    border-radius: 10px;
+  
+    transition: all 0.2s ease-out;
+    &:hover, &:focus{
+        background-color: red;
+        color: white;
+        outline: 1px solid rgb(255, 255, 255);
+    }
+    &:active {
+        translate: 0 2px;
+    }
+}
