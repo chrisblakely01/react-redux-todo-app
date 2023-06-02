@@ -6,7 +6,7 @@ export const getTodosAsync = createAsyncThunk(
 	async () => {
 		const resp = await fetch('http://localhost:7000/todos');
 		if (resp.ok) {
-			const todos = await resp.json();
+			const todos = resp.json();
 			return { todos };
 		}
 	}
@@ -24,7 +24,7 @@ export const addTodoAsync = createAsyncThunk(
 		});
 
 		if (resp.ok) {
-			const todo = await resp.json();
+			const todo = resp.json();
 			return { todo };
 		}
 	}
@@ -42,7 +42,7 @@ export const toggleCompleteAsync = createAsyncThunk(
 		});
 
 		if (resp.ok) {
-			const todo = await resp.json();
+			const todo = resp.json();
 			return { todo };
 		}
 	}
@@ -90,7 +90,7 @@ export const todoSlice = createSlice({
 		},
 		[toggleCompleteAsync.fulfilled]: (state, action) => {
 			const index = state.findIndex(
-				(todo) => todo.id === action.payload.todo.id
+				(todo) => todo === action.payload.todo
 			);
 			state[index].completed = action.payload.todo.completed;
 		},
